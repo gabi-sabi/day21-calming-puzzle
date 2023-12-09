@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag N Drop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Montserrat:wght@300;400&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="intro">
+        <h1>Take a break and enjoy <br/>this calming puzzle.</h1>
+        <h2>Drag pieces from left to right. <br/>Use button in the middle.</h2>
+    </div>
+    <div id="left">
+        <div class="list one" draggable="true"><img src="icon.png"></div>
+        <div class="list two" draggable="true"><img src="icon.png"></div>
+        <div class="list three" draggable="true"><img src="icon.png"></div>
+        <div class="list four" draggable="true"><img src="icon.png"></div>
+        <div class="list five" draggable="true"><img src="icon.png"></div>
+        <div class="list six" draggable="true"><img src="icon.png"></div>
+        <div class="list seven" draggable="true"><img src="icon.png"></div>
+    </div>
+    <div id="right"></div>
+</div>
+
+<script>
+
+let lists = document.getElementsByClassName("list");
+let rightBox = document.getElementById("right");
+let leftBox = document.getElementById("left");
+
+for(list of lists){
+    list.addEventListener("dragstart", function(e){
+        let selected = e.target;
+
+        rightBox.addEventListener("dragover", function(e){
+            e.preventDefault();
+        });
+        rightBox.addEventListener("drop", function(e){
+            rightBox.appendChild(selected);
+            selected = null;
+        });
+
+        leftBox.addEventListener("dragover", function(e){
+            e.preventDefault();
+        });
+        leftBox.addEventListener("drop", function(e){
+            leftBox.appendChild(selected);
+            selected = null;
+        });
+    })
+}
+
+</script>
+</body>
+</html>

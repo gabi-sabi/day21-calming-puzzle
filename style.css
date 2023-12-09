@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Sacramento', serif;
+    font-size: 3rem;
+    margin-bottom: 60px;
+    color: #fff;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: #A7ECEE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#left, #right{
+    width: 300px;
+    min-height: 400px;
+    margin: 20px;
+    border: 2px dashed #fff;
+}
+.list{
+    height: 55px;
+    margin: 2px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+}
+.list img{
+    width: 10px;
+    margin-right: 15px;
+    margin-left: 20px;
+}
+
+.list.one {
+    background: url("m4.jpg") no-repeat center center/cover;
+}
+
+.list.two {
+    background: url("m3.jpg") no-repeat center center/cover;
+}
+
+.list.three {
+    background: url("m1.jpg") no-repeat center center/cover;
+}
+
+.list.four {
+    background: url("m7.jpg") no-repeat center center/cover;
+}
+
+.list.five {
+    background: url("m5.jpg") no-repeat center center/cover;
+}
+
+.list.six {
+    background: url("m2.jpg") no-repeat center center/cover;
+}
+
+.list.seven {
+    background: url("m4.jpg") no-repeat center center/cover;
+}
+
+.watch-link{
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    font-size: 12px;
+    text-decoration: none;
+    color: #fff;
+}
+
